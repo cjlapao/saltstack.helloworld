@@ -1,0 +1,2 @@
+include:
+  - sportsstore.packages
