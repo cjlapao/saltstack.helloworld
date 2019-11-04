@@ -3,3 +3,4 @@ common_packages:
     - pkgs:
       - dos2unix
       - nodejs
+      - npm
