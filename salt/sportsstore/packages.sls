@@ -1,8 +1,8 @@
-upload-script:
+Sports Store Clone Script:
     file.managed:
-    - name: /src/scripts/sportsstore.clone.sh
-    - source: /src/scripts/sportsstore.clone.sh
+    - name: /tmp/sportsstore.clone.sh
+    - source: salt://scripts/sportsstore.clone.sh
 
-run-script:
+Clonning Sports Store:
     cmd.run:
-    - name: /src/scripts/sportsstore.clone.sh
+    - name: /tmp/sportsstore.clone.sh
