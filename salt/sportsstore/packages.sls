@@ -5,4 +5,4 @@ Sports Store Clone Script:
 
 Clonning Sports Store:
     cmd.run:
-    - name: /tmp/sportsstore.clone.sh
+    - name: sh /tmp/sportsstore.clone.sh
