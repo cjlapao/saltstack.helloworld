@@ -1,0 +1,2 @@
+include:
+  - package-update.packages
