@@ -219,12 +219,6 @@ do
     esac
 done
 
-echo "Var- > overrideDatabase: ${overrideDatabase}"
-echo "Var- > rebuildApp: ${rebuildApp}"
-echo "Var- > installApp: ${installApp}"
-echo "Var- > uninstallApp: ${uninstallApp}"
-echo "Var- > checkForUpdates: ${checkForUpdates}"
-
 if [ $unknown -eq 1 ]
 then
     echo "Invalid option, please use -h to see available options"
