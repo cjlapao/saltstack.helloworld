@@ -3,9 +3,6 @@ Dependency Packages:
     - pkgs:
       - nodejs
       - npm
-  pkg.removed:
-    - pkgs:
-      - nginx
 
 Sports Store Clone Script:
     file.managed:
