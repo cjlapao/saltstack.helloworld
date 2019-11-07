@@ -4,10 +4,12 @@ Dependency Packages:
       - nodejs
       - npm
 
+{% if salt['grains.get']('app-store') != 'yes' %}
 Sports Store Clone Script:
     file.managed:
     - name: /tmp/sportsstore.install.sh
     - source: salt://scripts/sportsstore.install.sh
+{% endif %}
 
 Sports Store App:
     cmd.run:

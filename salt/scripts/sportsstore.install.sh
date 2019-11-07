@@ -17,7 +17,7 @@ srcAppDir="${srcDir}/${appName}"
 liveDir="${srcAppDir}/dist"
 serviceFile="/etc/systemd/system/${appName}.service"
 
-useColor="true"
+useColor="false"
 
 overrideDatabase=0
 rebuildApp=0
@@ -105,7 +105,13 @@ checkForAppUpdate() {
     pullOutput=$(git pull)
     pullResult=$(echo ${pullOutput} | grep "Already up to date.")
     if [ -z "$pullResult" ]; 
-    then 
+    then
+        checkGitError=$(echo ${pullOutput} | grep "Aborting")
+        if [ ! -z "$checkGitError" ];
+        then
+            git add .
+            git reset --hard
+        fi
         output "There is an update for ${appName}, running the instalation without replacing the data" $blue
         installApp
         output "Sports Store has been updated" $green
