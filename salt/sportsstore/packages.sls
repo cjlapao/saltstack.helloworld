@@ -15,7 +15,7 @@ Sports Store App:
     - name: sh /tmp/sportsstore.install.sh -i
     grains.present:
       - name: app-store
-      - value: yes
+      - value: 'yes'
     {% else %}
     - name: sh /tmp/sportsstore.install.sh -c
     {% endif %}
